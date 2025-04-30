@@ -3,7 +3,7 @@ import axios from "axios";
 const sleep = (delay: number) => {
     return new Promise(resolve => {
         setTimeout(resolve, delay)
-    })
+    });
 }
 
 const agent = axios.create({
@@ -15,8 +15,8 @@ agent.interceptors.response.use(async response => {
         await sleep(1000);
         return response;
     } catch (error) {
-        console.log(error)
-        return Promise.reject(error);
+        console.log(error);
+        return Promise.reject(error)
     }
 });
 
