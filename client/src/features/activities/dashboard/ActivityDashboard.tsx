@@ -1,19 +1,16 @@
-import { Grid } from "@mui/material";
+import { Grid2 } from "@mui/material";
 import ActivityList from "./ActivityList";
-import { useEffect } from "react";
+import ActivityFilters from "./ActivityFilters";
 
 export default function ActivityDashboard() {
-    useEffect(() => {
-        console.log('ActivityDashboard Rendered')
-    }, []);
     return (
-        <Grid container spacing={3}>
-            <Grid size={7}>
+        <Grid2 container spacing={3}>
+            <Grid2 size={8}>
                 <ActivityList />
-            </Grid>
-            <Grid size={5}>
-                Activity filters go here
-            </Grid>
-        </Grid>
+            </Grid2>
+            <Grid2 size={4}>
+                <ActivityFilters />
+            </Grid2>
+        </Grid2>
     )
 }
